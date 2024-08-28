@@ -16,7 +16,7 @@ def idft(X):
     return x.real
 def circular_convolution(x, h):
     N = len(h)
-    x_padded = np.pad(x, (0, N - len(x)))  # Pad x with zeros
+    x_padded = np.pad(x, (0, N - len(x)))
     X = dft(x_padded)
     H = dft(h)
     Y = X * H
